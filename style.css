@@ -1,0 +1,469 @@
+@font-face {
+  font-family: "main-font";
+  src: url("/asstes/fonts/Freight\ Big\ Pro\ Medium.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: main-font;
+}
+html{
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  height: fit-content;
+}
+
+#main {
+  width: 100%;
+  background: #000;
+  
+}
+
+
+
+ /* ---------------------loader section--------------------------  */
+
+#loader{
+    top:0%;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    z-index: 33;
+    background: #000;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#loader video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    object-fit: cover;
+}
+
+ #yellow1{
+    top:0;
+    transition: 0.5s ease all;
+    width: 100%;
+    height: 100vh;
+    background: #f5e41b;
+    position: absolute;
+    z-index: 7;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#yellow2{
+  top:100%;
+  transition: 0.5s ease all;
+  width: 100%;
+  height: 100vh;
+  background:#f5e41b;
+  position: absolute;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#loader #page1-text h1{
+   color: #fff;
+   position: relative;
+   z-index: 5;
+}
+
+.animate-out {
+    top: -100% !important;
+    transition: top 0.5s ease-out;
+  }
+  
+
+
+/* --------------------------nav section------------------- */
+#nav{
+  position: fixed;
+  top: 0%;
+  left: 0;
+  z-index:20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 28px 41px;
+}
+
+#nav .logo svg{
+height: 17px;
+}
+#nav .logo svg path{
+ fill: #000;
+}
+
+#nav .nav-links{
+  gap:4vw;
+  display: flex;
+  align-items: center;
+  
+}
+@font-face {
+  font-family: "New hass l";
+  src: url("/asstes/fonts/NimbusSanL-Reg.otf");
+}
+#nav .nav-links a{
+  color: #000;
+  font-family: New hass l;
+  font-size: 1vw;
+  font-weight: 500;
+  text-decoration: none;
+  transition: ease all 0.5s;
+}
+
+#nav .nav-links a:hover{
+  text-decoration: underline;
+}
+#nav .nav-links #close{
+  
+  transform: rotate(50deg);
+}
+
+
+/* ------------------page-1 section---------------------------- */
+  #page1 {
+    width: 100%;
+    background: #f5e41b;
+    height: 100vh;
+
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+
+
+@font-face {
+  font-family: "light-font";
+  src: url(/asstes/fonts/Freight\ Big\ Pro\ Light.otf);
+}
+
+@font-face {
+  font-family: "light-i-font";
+  src: url(/asstes/fonts/Freight\ Big\ Pro\ Light\ Italic.otf);
+}
+
+#page1-text h1 {
+  text-align: center;
+  font-family: light-font;
+  line-height: 4.9vw;
+  font-weight: 560;
+  word-spacing: -7px;
+  font-size: 6.8vw;
+}
+
+#page1-text h1 em {
+  font-family: light-i-font;
+  font-weight: 500;
+}
+
+.page1-footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 41px;
+}
+
+.page1-footer a{
+  color: #000;
+  font-family: New hass l;
+  font-size: 1vw;
+  font-weight: 500;
+  text-decoration: none;
+  transition: ease all 0.5s;
+}
+
+/* --------------------------page-2 section--------------------- */
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  
+}
+
+.page2-text{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 0;
+  background: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page2-text .elem{
+  transition: ease all 0.5s;
+  position: relative;
+  width: 100%;
+
+}
+
+.page2-text .elem h1{
+line-height: 0.8;
+text-transform: uppercase;
+  position: relative;
+  z-index: 4;
+  font-size: 6vw;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+.elem:hover #moving{
+  transform: scaleY(1);
+}
+
+.elem h1:hover{
+  font-style: italic;
+  color: #000;
+}
+
+
+#moving{
+  position: absolute;
+  top:40%;
+  transition: ease all 0.5s;
+  z-index: 1;
+  transform: scaleY(0);
+  white-space: nowrap;
+  background: #f5e41b;
+  padding: 2px 0px;
+}
+
+#moving .moving-text-overlay{
+  
+  height: 100%;
+  width: 440px;
+  z-index: 2;
+  background:linear-gradient(to right,#f5e31bec,#f5e41b,#f5e31bec);
+  position: absolute;
+  left: 21.5%;
+
+  top:0;
+  transform: translate(50% 50%);
+}
+#moving .moving-text{
+  word-wrap: nowrap;
+  display: inline-block;
+  animation: moving-text linear infinite 10s;
+}
+
+#moving .moving-text p{
+  display: inline-block;
+  font-family: New hass l;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0px 5px;
+  color: #000000c2;
+  text-transform: uppercase;
+}
+
+@keyframes moving-text {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.page2-bottom{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 28px 0px;
+}
+/* ------------------page2 section-------------------- */
+
+
+#page3{
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+#page3 #image-data{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#page3 #image-data .line:nth-child(2) .image-container{
+  margin: 17px 0px;
+}
+
+#page3 #image-data .line .image-container{
+   margin: 17px;
+   height: 40vw;
+   width: 30vw;
+   position: relative;
+   overflow: hidden;
+
+}
+
+#page3 #image-data .line .image-container .image-overlay{
+  background: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 4;
+  transition: ease all 0.5s;
+  transition-delay: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page3 #image-data .line .image-container:hover .image-overlay{
+  /* transition: ease all 0.5s; */
+  opacity: 1;
+}
+#page3 #image-data .line .image-container:hover img{
+  transform: scale(1.2);
+}
+#page3 #image-data .line .image-container .image-overlay h3{
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  /* transition-delay: 0.5s; */
+  width: 70%;
+  opacity: 0;
+  line-height: 1;
+  font-weight: 300;
+}
+
+#page3 #image-data .line .image-container:hover .image-overlay h3{
+  opacity: 1;
+}
+
+#page3 #image-data .line .image-container img{
+  width: 100%;
+  height: 100%;
+  transition: ease all 0.5s;
+  object-fit: cover;
+}
+
+#page3 #image-data .line .image-container:nth-child(2){
+  height: 35vw;
+}
+
+#page3 #image-data .line .image-container:nth-child(3){
+  height: 30vw;
+}
+
+#page3 #image-data .line .image-container:nth-child(4){
+  height: 25vw;
+}
+
+#page3 #image-data .line .image-container:nth-child(5){
+  height: 20vw;
+}
+
+
+
+#page3 #image-data .line:nth-child(2) .image-container:nth-child(5){
+  height: 35vw;
+}
+
+#page3 #image-data .line:nth-child(2) .image-container:nth-child(3){
+  height: 30vw;
+}
+
+#page3 #image-data .line:nth-child(2) .image-container:nth-child(4){
+  height: 25vw;
+}
+
+#page3 #image-data .line:nth-child(2) .image-container:nth-child(1){
+  height: 20vw;
+}
+
+
+#page3 #image-data .page3-bottom {
+  padding: 28px;
+  width: 100%;
+  text-align: center;
+}
+#page3 #image-data .page3-bottom .bottom{
+  display: flex;
+  flex-direction: column;
+  
+}
+#page3 #image-data .page3-bottom .bottom img{
+  height: 15px;
+  width: 100%;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+#page3 #image-data .page3-bottom .bottom a{
+  color: #000;
+  font-family: New hass l;
+  font-size: 1vw;
+  font-weight: 500;
+  text-decoration: none;
+  transition: ease all 0.5s;
+  margin-top: 15px;
+}
+
+
+/*----------------------FOOTER section------------ */
+
+#footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+  padding: 28px 41px;
+  background: #000;
+}
+
+#footer a{
+  color: white;
+  font-family: New hass l;
+  font-size: 1vw;
+  font-weight: 500;
+  text-decoration: none;
+  transition: ease all 0.5s;
+
+}
+
+#footer a:hover{
+  text-decoration: underline;
+}
+
+#footer .footer-right{
+  display: flex;
+  gap: 4vw;
+}
